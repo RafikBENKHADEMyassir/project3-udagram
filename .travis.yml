@@ -22,7 +22,7 @@ install:
   - docker login -u rbenkhadem -p RUHzjE776hTERns
   - docker push rbenkhadem/udagram-api-feed:v1
   - docker push rbenkhadem/udagram-api-user:v1
-  -docker push rbenkhadem/udagram-frontend:v1
-  -docker push rbenkhadem/udagram-reverseproxy:v1
+  - docker push rbenkhadem/udagram-frontend:v1
+  - docker push rbenkhadem/udagram-reverseproxy:v1
 
 
