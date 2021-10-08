@@ -20,7 +20,9 @@ before_install:
 install: 
   - docker-compose -f docker-compose-build.yaml build --parallel
   - docker login -u rbenkhadem -p RUHzjE776hTERns
-  - docker build -f udagram-api-feed/Dockerfile -t  rbenkhadem/udagram-api-feed:latest udagram-feed-api
-  - docker build -f udagram-api-user/Dockerfile -t  rbenkhadem/udagram-api-user:latest udagram-user-api
-  - docker build -f udagram-frontend/Dockerfile -t  rbenkhadem/udagram-frontend:latest udagram-frontend
-  - docker build -f udagram-reverseproxy/Dockerfile -t  rbenkhadem/udagram-reverseproxy:latest udagram-reverse-proxy
+  - docker push rbenkhadem/udagram-api-feed:v1
+  - docker push rbenkhadem/udagram-api-user:v1
+  -docker push rbenkhadem/udagram-frontend:v1
+  -docker push rbenkhadem/udagram-reverseproxy:v1
+
+
