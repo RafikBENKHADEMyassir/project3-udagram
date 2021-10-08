@@ -19,5 +19,5 @@ before_install:
 
 install: 
   - docker-compose -f docker-compose-build.yaml build --parallel
-  - echo "rbenkhadem" | docker login -u "RUHzjE776hTERns" --password-stdin
+  - docker login -u "rbenkhadem" -p "RUHzjE776hTERns"
   - docker-compose -f docker-compose-build.yaml push 
